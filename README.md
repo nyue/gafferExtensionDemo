@@ -38,3 +38,21 @@ Next, test your install:
 `gaffer test DemoGafferExtensionTest DemoGafferExtensionUITest`
 
 Now run `gaffer` as normal.
+
+### Nicholas observations
+
+Running the extensions' tests
+```
+env LD_LIBRARY_PATH=/home/nyue/temp/gaffer_demo/lib:$LD_LIBRARY_PATH \
+	PYTHONPATH=/home/nyue/temp/gaffer_demo/python \
+	GAFFER_EXTENSION_PATHS=/home/nyue/temp/gaffer_demo \
+	$HOME/systems/gaffer/gaffer-1.5.16.0-linux-gcc11/bin/gaffer test DemoGafferExtensionTest DemoGafferExtensionUITest
+```
+
+Running gaffer that will include the new extensions
+```
+env LD_LIBRARY_PATH=/home/nyue/temp/gaffer_demo/lib:$LD_LIBRARY_PATH \
+	PYTHONPATH=/home/nyue/temp/gaffer_demo/python \
+	GAFFER_EXTENSION_PATHS=/home/nyue/temp/gaffer_demo \
+	$HOME/systems/gaffer/gaffer-1.5.16.0-linux-gcc11/bin/gaffer
+```
